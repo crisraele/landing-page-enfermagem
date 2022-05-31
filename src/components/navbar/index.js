@@ -1,36 +1,38 @@
 import React from 'react';
-import { Navegacao } from './styled';
-import { Icons } from './styled';
-import {Lista} from './styled';
+import * as S from './styled';
+import Fb from '../../image/icon-facebook.svg'
+import Inst from '../../image/icon-instagram.svg'
+import lin from '../../image/icon-linkedin.svg'
+import logo from '../../image/Google_2015_logo.svg.png'
+
 
 export const Navbar = () => {
     return(
-        <>
-            <Navegacao>
-                <Lista>
+        <S.Header>
+            <S.Navegacao>
+                <S.Lista>
                     <li>Página Inicial</li>
                     <li>Sobre Nós</li>
                     <li>Serviços</li>
                     <li>Contate-nos</li>
-                </Lista>
-            </Navegacao>
+                </S.Lista>
+            </S.Navegacao>
 
-            <div className='logo'>
-                <img src='' alt=''/>
-
-            </div>
-
-            <Icons>
+            <S.Logo>
+                <img src={logo} alt=''/>
+            </S.Logo>
+            
+            <S.Icons>
                 <div className='icon-facebook'>
-                <img src='/src/image/icon-facebook.svg' alt='icone do facebook'/>
+                <img src={Fb}alt='icone do facebook'/>
                 </div>
                 <div className='icon-linkedin'>
-                <img src='/src/image/icon-linkedin.svg' alt='icone do linkedin'/>
+                <img src={lin} alt='icone do linkedin'/>
                 </div>
                 <div className='icon-instagram'>
-                <img src='/src/image/instagram.png' alt='icone do Instagram'/>
+                <img src={Inst} alt='icone do Instagram' style={{width:"1.5rem", height:"1.5rem"}}/>
                 </div>
-            </Icons>
-        </>
+            </S.Icons>
+     </S.Header>
     );
 }

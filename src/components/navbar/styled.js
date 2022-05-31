@@ -1,37 +1,41 @@
 import styled from 'styled-components';
 
 
-export const Icons = styled.div`
-position: absolute;
-width: 18px;
-height: 18px;
-left: 1257.26px;
-top: 49.81px;
-display: flex;
-margin: 40px;
+export const Header = styled.div`
+ display:flex;
+ justify-content:space-between;
+ margin:2.5625rem 3.0625rem;
+ cursor: pointer;
 
+`
+export const Icons = styled.div`
+    div{
+        display:inline-flex;
+        padding: 0.8rem;
+        
+    }
+    .icon-instagram{
+        position: absolute;
+        
+    }
+    margin-right:3.0625rem;
+    cursor: pointer;
 `
 
 export const Navegacao = styled.div`
-position: absolute;
-width: 449px;
-height: 24px;
-left: 49px;
-top: 41px;
-font-family: 'Hind Vadodara';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 24px;
-letter-spacing: 0.01em;
-color: #331B3B;
+  
+`
+export const Logo = styled.div`
+  display:flex;
+  width:163px;
+  height:36px;
 `
 export const Lista = styled.ul`
-display: flex;
-justify-content: flex-start;
-list-style: none;
-margin: .5rem;
-left: 49px;
+    li{
+        display:inline;
+        padding:0.5rem;
+    }
 `
+
 
 
