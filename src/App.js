@@ -1,12 +1,21 @@
 
 import React from 'react';
-import Routes from './routes';
-
+import Home from "./pages/home";
+import About from "./pages/aboutUs";
+import Service from "./pages/service";
+import Contact from "./pages/contact";
+import Blog from "./pages/blog";
+import Testemonials from "./pages/testemonials";
 
 function App() {
   return (
     <>
-    <Routes />
+    <Home id='home-section'/>
+    <Service id='service-section'/>
+    <About id='about-section' />
+    <Blog id='contato-section'/>
+    <Testemonials id='contato-section'/>
+    <Contact id='contato-section'/>
     </>
   );
 }

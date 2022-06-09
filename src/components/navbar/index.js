@@ -6,15 +6,17 @@ import lin from '../../image/icon-linkedin.svg'
 import logo from '../../image/Google_2015_logo.svg.png'
 
 
+
 export const Navbar = () => {
+    
     return(
         <S.Header>
             <S.Navegacao>
                 <S.Lista>
-                    <li>Página Inicial</li>
-                    <li>Sobre Nós</li>
-                    <li>Serviços</li>
-                    <li>Contate-nos</li>
+                    <li onClick={() => document.getElementById('home-section').scrollIntoView({ behavior: 'smooth' })}>Página Inicial</li>
+                    <li onClick={() => document.getElementById('about-section').scrollIntoView({ behavior: 'smooth' })}>Sobre Nós</li>
+                    <li onClick={() => document.getElementById('service-section').scrollIntoView({ behavior: 'smooth' })}>Serviços</li>
+                    <li onClick={() => document.getElementById('contato-section').scrollIntoView({ behavior: 'smooth' })}>Contate-nos</li>
                 </S.Lista>
             </S.Navegacao>
 
