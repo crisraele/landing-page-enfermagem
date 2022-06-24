@@ -1,4 +1,4 @@
-#Projeto em construção... As atualizações estão sendo feitas!#
+# Projeto em construção... As atualizações estão sendo feitas!
 
 
 # Getting Started with Create React App
