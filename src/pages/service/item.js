@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import itemCarrousel from '../../image/imageItemCarroussel.jpg';
+import itemCarrousel from "../../image/ItemCaroussel.jpg"
 
 export default styled.div`
   display: flex;

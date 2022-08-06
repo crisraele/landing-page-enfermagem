@@ -1,12 +1,11 @@
 .ItemsCarrousel {
     font-family: sans-serif;
     display: flex;
-    padding: 0;
     flex-direction: column;
     align-items: center;
-    background-color: #FAD4D4;
     justify-content: center;
     height: 70vh;
+    background-color: #FAD4D4;
   }
   
   .seperator {
@@ -25,13 +24,13 @@
     outline: none;
     box-shadow: inset 0 0 1px 0px violet;
   }
-  .titlecarroussel strong{
-    font-size: Bold;
-    width: 50px;
-    height: 50px;
-    color:#F47C7C;
+  .titlecarroussel{
     align-items: center;
   }
   .titlecarroussel p{
-    margin-left: 20px;
+    margin-left: 15px;
+  }
+  .titlecarroussel strong{
+    color:#F47C7C;
+    font-family: bold;
   }
