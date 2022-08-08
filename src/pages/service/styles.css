@@ -1,0 +1,36 @@
+.ItemsCarrousel {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    background-color: #FAD4D4;
+  }
+  
+  .seperator {
+    width: 100%;
+  }
+  
+  .controls-wrapper {
+    width: 100%;
+  }
+  
+  .carousel-wrapper {
+    width: 100%;
+  }
+  
+  .rec-carousel-item:focus {
+    outline: none;
+    box-shadow: inset 0 0 1px 0px violet;
+  }
+  .titlecarroussel{
+    align-items: center;
+  }
+  .titlecarroussel p{
+    margin-left: 15px;
+  }
+  .titlecarroussel strong{
+    color:#F47C7C;
+    font-family: bold;
+  }

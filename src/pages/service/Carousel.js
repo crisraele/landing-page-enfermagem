@@ -1,50 +1,51 @@
-/*
-import React from "react";
-import 'react-multi-carousel/lib/styles.css';
-import Carousel from 'react-multi-carousel';
 
+import React, { useState } from "react";
+import ReactDOM from "react-dom";
+import Carousel from "react-elastic-carousel";
+import Item from "./item";
+import "./styles.css";
 
-export default responsive = {
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 3,
-    slidesToSlide: 3 // optional, default to 1.
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 2,
-    slidesToSlide: 2 // optional, default to 1.
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1,
-    slidesToSlide: 1 // optional, default to 1.
-  }
-};
-<Carousel
-  swipeable={false}
-  draggable={false}
-  showDots={true}
-  responsive={responsive}
-  ssr={true} // means to render carousel on server-side.
-  infinite={true}
-  autoPlay={this.props.deviceType !== "mobile" ? true : false}
-  autoPlaySpeed={1000}
-  keyBoardControl={true}
-  customTransition="all .5"
-  transitionDuration={500}
-  containerClass="carousel-container"
-  removeArrowOnDeviceType={["tablet", "mobile"]}
-  deviceType={this.props.deviceType}
-  dotListClass="custom-dot-list-style"
-  itemClass="carousel-item-padding-40-px"
->
-  <div>Item 1</div>
-  <div>Item 2</div>
-  <div>Item 3</div>
-  <div>Item 4</div>
-</Carousel>;
+const breakPoints = [
+  { width: 1, itemsToShow: 1 },
+  { width: 550, itemsToShow: 2, itemsToScroll: 2 },
+  { width: 768, itemsToShow: 3 },
+  { width: 1200, itemsToShow: 4 }
+];
 
-https://www.npmjs.com/package/react-multi-carousel
+function CarouselItems() {
+  const [items, setItems] = useState([1, 2, 3, 4, 5, 6, 7, 8]);
 
-*/
+  const addItem = () => {
+    const nextItem = Math.max(1, items.length + 1);
+    setItems([...items, nextItem]);
+  };
+
+  const removeItem = () => {
+    const endRange = Math.max(0, items.length - 1);
+    setItems(items.slice(0, endRange));
+  };
+
+  return (
+    <>
+    <div className="ItemsCarrousel">
+      <div className="controls-wrapper">
+        {/*<button onClick={removeItem}>Remove Item</button>*/}
+        {/*<button onClick={addItem}>Add Item</button>*/}
+      </div>
+      <div className="titlecarroussel">
+          <strong>O que Nós Fazemos</strong> 
+          <p>Para te Ajudar</p>       
+      </div>
+      <hr className="seperator" />
+      <div className="carousel-wrapper">
+        <Carousel breakPoints={breakPoints}>
+          {items.map((item) => (
+            <Item key={item}>{}</Item>
+          ))}
+        </Carousel>
+      </div>
+    </div>
+    </>
+  );
+}
+export default CarouselItems;
